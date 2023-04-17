@@ -34,19 +34,27 @@ struct PokemonPriceTCGApp: App {
         return HomeView()
     }
     
-    private func makeSearchView() -> SearchView {
-        return SearchView(viewModel: SearchViewModel())
+    private mutating func makeSearchView() -> SearchView {
+        
     }
     
-    private mutating func makeRemoteSearchCardsLoader(search: String) -> () -> AnyPublisher<[Card], Error> {
+    private mutating func makeRemoteSearchCardsLoader(search: String) -> AnyPublisher<[Card], Error> {
         let url = CardEndPoint.search(search).url(baseURL: baseURL)
         
-        return {  [httpClient, scheduler] in
-            httpClient
+        return httpClient
             .getPublisher(url: url)
             .tryMap(CardMapper.map)
             .subscribe(on: scheduler)
             .eraseToAnyPublisher()
-        }
+        
+    }
+}
+
+class ContentViewFactory {
+    private init() {}
+    
+    @MainActor
+    static func makeSearchView(searchLoader:  AnyPublisher<[Card], Error>) -> SearchView {
+        return SearchView(viewModel: SearchViewModel(searchCard: makeRemoteSearchCardsLoader(search:)))
     }
 }

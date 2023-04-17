@@ -17,11 +17,11 @@ class SearchViewModel: ObservableObject {
 
     var cancellables: [AnyCancellable] = []
     
-    init() {
+    init(searchCard: @escaping (String) -> AnyPublisher<[Card], Error>) {
         $searchTerm
             .debounce(for: .seconds(3), scheduler: DispatchQueue.main)
-            .sink { search in
-            
+            .sink { [searchCard] search in
+                searchCard(search)
         }.store(in: &cancellables)
     }
     

@@ -35,7 +35,7 @@ struct TabMainView_Previews: PreviewProvider {
             homeView:
                 HomeView(),
             searchView:
-                SearchView(viewModel: SearchViewModel())
+                SearchView(viewModel: SearchViewModel(searchCard: <#(String) -> AnyPublisher<[Card], Error>#>))
         )
                 
     }
