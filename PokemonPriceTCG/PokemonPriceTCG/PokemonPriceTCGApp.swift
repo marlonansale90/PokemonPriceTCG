@@ -11,7 +11,8 @@ import SwiftUI
 struct PokemonPriceTCGApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TabMainView()
         }
     }
 }
+

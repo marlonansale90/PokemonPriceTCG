@@ -1,13 +1,6 @@
-//
-//  ContentView.swift
-//  PokemonPriceTCG
-//
-//  Created by Marlon Von Bernales Ansale on 17/04/2023.
-//
-
 import SwiftUI
 
-struct ContentView: View {
+struct HomeView: View {
     var body: some View {
         VStack {
             Image(systemName: "globe")
@@ -19,8 +12,8 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        HomeView()
     }
 }
