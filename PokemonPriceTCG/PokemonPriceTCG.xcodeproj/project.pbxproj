@@ -21,6 +21,11 @@
 		A9AA3D2829ED563100AA98FB /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AA3D2729ED563100AA98FB /* CardViewModel.swift */; };
 		A9AA3D2B29ED576E00AA98FB /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AA3D2A29ED576E00AA98FB /* DateFormatter.swift */; };
 		A9AA3D2D29ED57A200AA98FB /* HTTPURLResponse+StatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AA3D2C29ED57A200AA98FB /* HTTPURLResponse+StatusCode.swift */; };
+		A9AA3D3029ED5A1C00AA98FB /* HTTPClientTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AA3D2F29ED5A1C00AA98FB /* HTTPClientTask.swift */; };
+		A9AA3D3229ED5A8D00AA98FB /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AA3D3129ED5A8D00AA98FB /* URLSessionHTTPClient.swift */; };
+		A9AA3D3429ED5C3700AA98FB /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AA3D3329ED5C3700AA98FB /* SearchViewModel.swift */; };
+		A9AA3D3629ED5E8900AA98FB /* SearchItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AA3D3529ED5E8900AA98FB /* SearchItemView.swift */; };
+		A9AA3D3929ED7A0800AA98FB /* Combine+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AA3D3829ED7A0800AA98FB /* Combine+Helpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +44,11 @@
 		A9AA3D2729ED563100AA98FB /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
 		A9AA3D2A29ED576E00AA98FB /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		A9AA3D2C29ED57A200AA98FB /* HTTPURLResponse+StatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPURLResponse+StatusCode.swift"; sourceTree = "<group>"; };
+		A9AA3D2F29ED5A1C00AA98FB /* HTTPClientTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClientTask.swift; sourceTree = "<group>"; };
+		A9AA3D3129ED5A8D00AA98FB /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
+		A9AA3D3329ED5C3700AA98FB /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		A9AA3D3529ED5E8900AA98FB /* SearchItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchItemView.swift; sourceTree = "<group>"; };
+		A9AA3D3829ED7A0800AA98FB /* Combine+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Combine+Helpers.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +81,7 @@
 		A932645529ED3A37009B860A /* PokemonPriceTCG */ = {
 			isa = PBXGroup;
 			children = (
+				A9AA3D3729ED793900AA98FB /* Shared */,
 				A9AA3D1529ED533500AA98FB /* Feed */,
 				A9AA3D1029ED48AF00AA98FB /* Search */,
 				A9AA3D0F29ED48A700AA98FB /* Home */,
@@ -102,6 +113,8 @@
 			isa = PBXGroup;
 			children = (
 				A9AA3D1329ED48FE00AA98FB /* SearchView.swift */,
+				A9AA3D3329ED5C3700AA98FB /* SearchViewModel.swift */,
+				A9AA3D3529ED5E8900AA98FB /* SearchItemView.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -146,6 +159,7 @@
 		A9AA3D1E29ED552C00AA98FB /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				A9AA3D2E29ED5A0E00AA98FB /* API */,
 				A9AA3D2929ED576200AA98FB /* Helpers */,
 				A9AA3D1F29ED553500AA98FB /* Domain */,
 			);
@@ -175,6 +189,23 @@
 				A9AA3D2C29ED57A200AA98FB /* HTTPURLResponse+StatusCode.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		A9AA3D2E29ED5A0E00AA98FB /* API */ = {
+			isa = PBXGroup;
+			children = (
+				A9AA3D2F29ED5A1C00AA98FB /* HTTPClientTask.swift */,
+				A9AA3D3129ED5A8D00AA98FB /* URLSessionHTTPClient.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		A9AA3D3729ED793900AA98FB /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				A9AA3D3829ED7A0800AA98FB /* Combine+Helpers.swift */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,12 +284,17 @@
 				A9AA3D2529ED55F400AA98FB /* CardEndPoint.swift in Sources */,
 				A9AA3D2829ED563100AA98FB /* CardViewModel.swift in Sources */,
 				A9AA3D2B29ED576E00AA98FB /* DateFormatter.swift in Sources */,
+				A9AA3D3429ED5C3700AA98FB /* SearchViewModel.swift in Sources */,
 				A9AA3D1229ED48F500AA98FB /* HomeView.swift in Sources */,
+				A9AA3D3229ED5A8D00AA98FB /* URLSessionHTTPClient.swift in Sources */,
 				A9AA3D1829ED540F00AA98FB /* Card.swift in Sources */,
+				A9AA3D3929ED7A0800AA98FB /* Combine+Helpers.swift in Sources */,
 				A9AA3D1D29ED549700AA98FB /* SuperType.swift in Sources */,
 				A932645929ED3A37009B860A /* TabMainView.swift in Sources */,
 				A9AA3D2D29ED57A200AA98FB /* HTTPURLResponse+StatusCode.swift in Sources */,
 				A932645729ED3A37009B860A /* PokemonPriceTCGApp.swift in Sources */,
+				A9AA3D3029ED5A1C00AA98FB /* HTTPClientTask.swift in Sources */,
+				A9AA3D3629ED5E8900AA98FB /* SearchItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

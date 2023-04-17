@@ -23,6 +23,11 @@ struct SearchView: View {
     ]
     
     @State private var searchTerm: String = ""
+    @State private var viewModel: SearchViewModel
+
+    init(viewModel: SearchViewModel) {
+        self.viewModel = viewModel
+    }
     
     var filteredItems: [Item] {
         if searchTerm.isEmpty {
@@ -37,12 +42,8 @@ struct SearchView: View {
             List(filteredItems) { item in
                 Text(item.name)
             }
-            .searchable(text: $searchTerm) {
-                ForEach(filteredItems) { item in
-                    Text("Search for \(item.name)")
-                        .searchCompletion(item.name)
-                }
-            }
+            .searchable(text: $searchTerm)
+        
             .navigationTitle("Fruit")
         }
     }
@@ -50,6 +51,6 @@ struct SearchView: View {
 
 struct SearchView_Previews: PreviewProvider {
     static var previews: some View {
-        SearchView()
+        SearchView(viewModel: SearchViewModel())
     }
 }

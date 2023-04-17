@@ -8,27 +8,35 @@
 import SwiftUI
 
 struct TabMainView: View {
+    
+    let homeView: HomeView
+    let searchView: SearchView
+    
     var body: some View {
         TabView {
-            HomeView()
-                .font(.system(size: 30, weight: .bold, design: .rounded))
+            homeView .font(.system(size: 30, weight: .bold, design: .rounded))
                 .tabItem {
                     Image(systemName: "house.fill")
-                    Text("Type")
+                    Text("Home")
                 }
                 .tag(1)
-            SearchView()
-                    .tabItem {
-                        Image(systemName: "magnifyingglass")
-                        Text("Search")
-                    }
-                    .tag(0)
+            searchView.tabItem {
+                Image(systemName: "magnifyingglass")
+                Text("Search")
+            }
+            .tag(0)
         }
     }
 }
 
 struct TabMainView_Previews: PreviewProvider {
     static var previews: some View {
-        TabMainView()
+        TabMainView(
+            homeView:
+                HomeView(),
+            searchView:
+                SearchView(viewModel: SearchViewModel())
+        )
+                
     }
 }
