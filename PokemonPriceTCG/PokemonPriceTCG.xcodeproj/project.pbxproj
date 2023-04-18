@@ -26,6 +26,8 @@
 		A9AA3D3429ED5C3700AA98FB /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AA3D3329ED5C3700AA98FB /* SearchViewModel.swift */; };
 		A9AA3D3629ED5E8900AA98FB /* SearchItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AA3D3529ED5E8900AA98FB /* SearchItemView.swift */; };
 		A9AA3D3929ED7A0800AA98FB /* Combine+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AA3D3829ED7A0800AA98FB /* Combine+Helpers.swift */; };
+		A9BA214E29EE9A2400650D1E /* SearchAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BA214D29EE9A2400650D1E /* SearchAdapter.swift */; };
+		A9BA215029EEA64900650D1E /* SearchLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BA214F29EEA64900650D1E /* SearchLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +51,8 @@
 		A9AA3D3329ED5C3700AA98FB /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		A9AA3D3529ED5E8900AA98FB /* SearchItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchItemView.swift; sourceTree = "<group>"; };
 		A9AA3D3829ED7A0800AA98FB /* Combine+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Combine+Helpers.swift"; sourceTree = "<group>"; };
+		A9BA214D29EE9A2400650D1E /* SearchAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAdapter.swift; sourceTree = "<group>"; };
+		A9BA214F29EEA64900650D1E /* SearchLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +119,8 @@
 				A9AA3D1329ED48FE00AA98FB /* SearchView.swift */,
 				A9AA3D3329ED5C3700AA98FB /* SearchViewModel.swift */,
 				A9AA3D3529ED5E8900AA98FB /* SearchItemView.swift */,
+				A9BA214D29EE9A2400650D1E /* SearchAdapter.swift */,
+				A9BA214F29EEA64900650D1E /* SearchLoader.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -280,6 +286,7 @@
 			files = (
 				A9AA3D2129ED553D00AA98FB /* Legalities.swift in Sources */,
 				A9AA3D1429ED48FE00AA98FB /* SearchView.swift in Sources */,
+				A9BA215029EEA64900650D1E /* SearchLoader.swift in Sources */,
 				A9AA3D2329ED558800AA98FB /* CardMapper.swift in Sources */,
 				A9AA3D2529ED55F400AA98FB /* CardEndPoint.swift in Sources */,
 				A9AA3D2829ED563100AA98FB /* CardViewModel.swift in Sources */,
@@ -295,6 +302,7 @@
 				A932645729ED3A37009B860A /* PokemonPriceTCGApp.swift in Sources */,
 				A9AA3D3029ED5A1C00AA98FB /* HTTPClientTask.swift in Sources */,
 				A9AA3D3629ED5E8900AA98FB /* SearchItemView.swift in Sources */,
+				A9BA214E29EE9A2400650D1E /* SearchAdapter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

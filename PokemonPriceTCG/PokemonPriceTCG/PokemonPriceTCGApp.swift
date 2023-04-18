@@ -26,7 +26,7 @@ struct PokemonPriceTCGApp: App {
     var body: some Scene {
         WindowGroup {
             TabMainView(homeView: makeHomeView(),
-                        searchView: makeSearchView())
+                        searchView: makeSearchView(searchCardLoader: self.makeRemoteSearchCardsLoader(search:)))
         }
     }
     
@@ -50,11 +50,24 @@ struct PokemonPriceTCGApp: App {
     }
 }
 
-class ContentViewFactory {
+class SearchViewFactory {
     private init() {}
     
     @MainActor
     static func makeSearchView(searchLoader:  AnyPublisher<[Card], Error>) -> SearchView {
-        return SearchView(viewModel: SearchViewModel(searchCard: makeRemoteSearchCardsLoader(search:)))
+        
+        let viewModel = SearchViewModel()
+        
+        
+        viewModel.searchCallBack = { search in
+            
+        }
+        
+        let searchView = SearchView(viewModel: SearchViewModel())
+        return searchView
     }
+}
+
+class SearchAdapter {
+    
 }
